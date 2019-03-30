@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class BDClientes {
     private static ArrayList<Clientes> clienteList;
-    public static ArrayList<Clientes> getContatosList(){
+    public static ArrayList<Clientes> getClientesList(){
         if(clienteList == null){
             clienteList = new ArrayList<>();
             Clientes c1 = new Clientes();
