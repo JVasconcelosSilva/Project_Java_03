@@ -5,7 +5,7 @@
 --%>
 
 <%@page import="br.com.projeto3.Clientes"%>
-<%@page import="br.com.projeto3.BD"%>
+<%@page import="br.com.projeto3.BDClientes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,13 +18,13 @@
         novoContato.setNome(nome);
         novoContato.setTelefone(telefone);
         novoContato.setEmail(email);
-        BD.getContatosList().add(novoContato);
+        BDClientes.getContatosList().add(novoContato);
         response.sendRedirect(request.getRequestURI());
     } else if (request.getParameter("excluir") != null) {
         String resposta = request.getParameter("excluir");
         if (resposta.equals("Sim")) {
             int id = Integer.parseInt(request.getParameter("id"));
-            BD.getContatosList().remove(id);
+            BDClientes.getContatosList().remove(id);
         }
         response.sendRedirect(request.getRequestURI());
     } else if (request.getParameter("alterar") != null) {
@@ -35,7 +35,7 @@
             novoContato.setNome(request.getParameter("nome"));
             novoContato.setTelefone(request.getParameter("telefone"));
             novoContato.setEmail(request.getParameter("email"));
-            BD.getContatosList().set(id, novoContato);
+            BDClientes.getContatosList().set(id, novoContato);
 
         }
         response.sendRedirect(request.getRequestURI());
@@ -65,9 +65,9 @@
                 <th>Endereço</th>
                 <th>Comandos</th>
             </tr>
-            <%for (Clientes c : BD.getContatosList()) {%>
+            <%for (Clientes c : BDClientes.getContatosList()) {%>
             <tr>
-                <%int id = BD.getContatosList().indexOf(c);%>
+                <%int id = BDClientes.getContatosList().indexOf(c);%>
 
                 <td><%= id%></td>
                 <td><%= c.getNome()%></td>
