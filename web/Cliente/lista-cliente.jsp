@@ -9,7 +9,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%
+    <%@include file="WEB-INF/jspf/header.jsp" %> 
+    <%  
     if (request.getParameter("adicionar") != null) {
         String nome = request.getParameter("nome");
         String telefone = request.getParameter("telefone");
