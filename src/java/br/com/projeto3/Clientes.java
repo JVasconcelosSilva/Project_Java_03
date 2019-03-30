@@ -11,7 +11,6 @@ public class Clientes {
     private String email;
     private String telefone;
     private String endereco;
-    
 
     public String getNome() {
         return nome;

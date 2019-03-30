@@ -13,30 +13,38 @@
     <%  
     if (request.getParameter("adicionar") != null) {
         String nome = request.getParameter("nome");
-        String telefone = request.getParameter("telefone");
+        String cpf = request.getParameter("cpf");
+        String rg = request.getParameter("rg");
         String email = request.getParameter("email");
-        Clientes novoContato = new Clientes();
-        novoContato.setNome(nome);
-        novoContato.setTelefone(telefone);
-        novoContato.setEmail(email);
-        BDClientes.getContatosList().add(novoContato);
+        String telefone = request.getParameter("telefone");
+        String endereco = request.getParameter("endereco");
+        
+        Clientes novoCliente = new Clientes();
+        novoCliente.setNome(nome);
+        novoCliente.setCpf(cpf);
+        novoCliente.setRg(rg);
+        novoCliente.setEmail(email);
+        novoCliente.setTelefone(telefone);
+        novoCliente.setEndereco(endereco);
+        
+        BDClientes.getClientesList().add(novoCliente);
         response.sendRedirect(request.getRequestURI());
     } else if (request.getParameter("excluir") != null) {
         String resposta = request.getParameter("excluir");
         if (resposta.equals("Sim")) {
             int id = Integer.parseInt(request.getParameter("id"));
-            BDClientes.getContatosList().remove(id);
+            BDClientes.getClientesList().remove(id);
         }
         response.sendRedirect(request.getRequestURI());
     } else if (request.getParameter("alterar") != null) {
         String resposta = request.getParameter("alterar");
         if (resposta.equals("Sim")) {
             int id = Integer.parseInt(request.getParameter("id"));
-            Clientes novoContato = new Clientes();
-            novoContato.setNome(request.getParameter("nome"));
-            novoContato.setTelefone(request.getParameter("telefone"));
-            novoContato.setEmail(request.getParameter("email"));
-            BDClientes.getContatosList().set(id, novoContato);
+            Clientes novoCliente = new Clientes();
+            novoCliente.setNome(request.getParameter("nome"));
+            novoCliente.setTelefone(request.getParameter("telefone"));
+            novoCliente.setEmail(request.getParameter("email"));
+            BDClientes.getClientesList().set(id, novoCliente);
 
         }
         response.sendRedirect(request.getRequestURI());
@@ -51,7 +59,7 @@
         <h1>WebApp</h1>
         <h2>Contatos</h2>
 
-        <form action="adicionar.jsp">
+        <form action="incluir-cliente.jsp">
             <input type="submit" value="Adicionar">
         </form>
         <h3>Listagem</h3>
@@ -66,17 +74,17 @@
                 <th>Endereço</th>
                 <th>Comandos</th>
             </tr>
-            <%for (Clientes c : BDClientes.getContatosList()) {%>
+            <%for (Clientes c : BDClientes.getClientesList()) {%>
             <tr>
-                <%int id = BDClientes.getContatosList().indexOf(c);%>
+                <%int id = BDClientes.getClientesList().indexOf(c);%>
 
                 <td><%= id%></td>
                 <td><%= c.getNome()%></td>
                 <td><%= c.getCpf()%></td>
-                <td><%= c.getNome()%></td>
+                <td><%= c.getRg()%></td>
                 <td><%= c.getEmail()%></td>
                 <td><%= c.getTelefone()%></td>
-                <td><%= c.getTelefone()%></td>
+                <td><%= c.getEndereco()%></td>
                 <td>
                     <a href="alterar.jsp?id=<%=id%>">
                         <button>Alterar</button>
