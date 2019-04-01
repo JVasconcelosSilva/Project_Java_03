@@ -5,6 +5,7 @@ package br.com.projeto3;
  * @author Jefferson V.
  */
 public class Clientes {
+
     private String nome;
     private String cpf;
     private String rg;
@@ -19,7 +20,7 @@ public class Clientes {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
     public String getCpf() {
         return cpf;
     }
@@ -27,7 +28,7 @@ public class Clientes {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    
+
     public String getRg() {
         return rg;
     }
@@ -35,7 +36,7 @@ public class Clientes {
     public void setRg(String rg) {
         this.rg = rg;
     }
-    
+
     public String getEmail() {
         return email;
     }
@@ -43,7 +44,7 @@ public class Clientes {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public String getTelefone() {
         return telefone;
     }
@@ -51,7 +52,7 @@ public class Clientes {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    
+
     public String getEndereco() {
         return endereco;
     }
@@ -60,5 +61,4 @@ public class Clientes {
         this.endereco = endereco;
     }
 
-    
 }

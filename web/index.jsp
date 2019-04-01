@@ -10,11 +10,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Home</title>
+        <style>
+            #home{
+                margin-left: 40px;
+            }
+        </style>
     </head>
     <body>
+        <div id="home">
+            <br>
+        <h3>Projeto 03</h3>
+        <p>Jefferson Vasconcelos da Silva</p>
+        <p>João Marcos Pereira Albuquerque</p>
         
-        <h1>Hello World!</h1>
+        
+        </div>
     </body>
     <%@include file="WEB-INF/jspf/footer.jsp" %>
 </html>
