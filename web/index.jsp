@@ -24,7 +24,6 @@
         <p>Jefferson Vasconcelos da Silva</p>
         <p>João Marcos Pereira Albuquerque</p>
         
-        
         </div>
     </body>
     <%@include file="WEB-INF/jspf/footer.jsp" %>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : footer
     Created on : 27/03/2019, 21:40:43
-    Author     : User
+    Author     : John, Jefferson V.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
