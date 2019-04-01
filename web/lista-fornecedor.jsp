@@ -13,12 +13,20 @@
 <%
     if (request.getParameter("adicionar") != null) {
         String nome = request.getParameter("nome");
-        String telefone = request.getParameter("telefone");
+        String razao = request.getParameter("razao");
+        String cnpj = request.getParameter("cnpj");
         String email = request.getParameter("email");
+        String telefone = request.getParameter("telefone");
+        String endereco = request.getParameter("endereco");
+        
         Fornecedores novoContato = new Fornecedores();
         novoContato.setNome(nome);
-        novoContato.setTelefone(telefone);
+        novoContato.setRazao(razao);
+        novoContato.setCnpj(cnpj);
         novoContato.setEmail(email);
+        novoContato.setTelefone(telefone);
+        novoContato.setEndereco(endereco);
+        
         BDFornecedores.getFornecedoresList().add(novoContato);
         response.sendRedirect(request.getRequestURI());
     } else if (request.getParameter("excluir") != null) {
@@ -34,8 +42,12 @@
             int id = Integer.parseInt(request.getParameter("id"));
             Fornecedores novoContato = new Fornecedores();
             novoContato.setNome(request.getParameter("nome"));
-            novoContato.setTelefone(request.getParameter("telefone"));
+            novoContato.setRazao(request.getParameter("razao"));
+            novoContato.setCnpj(request.getParameter("cnpj"));
             novoContato.setEmail(request.getParameter("email"));
+            novoContato.setTelefone(request.getParameter("telefone"));
+            novoContato.setEndereco(request.getParameter("endereco"));
+            
             BDFornecedores.getFornecedoresList().set(id, novoContato);
 
         }

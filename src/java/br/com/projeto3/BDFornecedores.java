@@ -17,21 +17,21 @@ public class BDFornecedores {
         if(fornecedorList == null){
             fornecedorList = new ArrayList<>();
             Fornecedores fo = new Fornecedores();
-            fo.setNome("Fulano");
-            fo.setCnpj("45759724878");
-            fo.setRazao("37247102X");
-            fo.setEmail("fulano@domain.com");
-            fo.setTelefone("+55 13 99000-1111");
-            fo.setEndereco("Rua Antônio Figueiredo, 503");
+            fo.setNome("Renan Pereira");
+            fo.setCnpj("973164312546");
+            fo.setRazao("Ltda.");
+            fo.setEmail("renan@domain.com");
+            fo.setTelefone("+55 13 99888-7777");
+            fo.setEndereco("Rua José de Paiva Vidal, 357");
             fornecedorList.add(fo);
             
             Fornecedores fo2 = new Fornecedores();
-            fo2.setNome("Mano");
-            fo2.setCnpj("09863487536");
-            fo2.setRazao("274568972");
-            fo2.setEmail("mano@domain.com");
-            fo2.setTelefone("+55 13 99123-1100");
-            fo2.setEndereco("Avenida Roberto Sales, 2015");
+            fo2.setNome("Luis Ribeiro");
+            fo2.setCnpj("173928465248");
+            fo2.setRazao("SA");
+            fo2.setEmail("luis@domain.com");
+            fo2.setTelefone("+55 13 99123-1234");
+            fo2.setEndereco("Rua Professor João Augusto de Toledo, 958");
             fornecedorList.add(fo2);
         }
         return fornecedorList;
