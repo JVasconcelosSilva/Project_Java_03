@@ -7,10 +7,10 @@ import java.util.ArrayList;
  * @author Jefferson V.
  */
 public class BDClientes {
-    private static ArrayList<Clientes> clienteList;
+    private static ArrayList<Clientes> clientesList;
     public static ArrayList<Clientes> getClientesList(){
-        if(clienteList == null){
-            clienteList = new ArrayList<>();
+        if(clientesList == null){
+            clientesList = new ArrayList<>();
             Clientes c1 = new Clientes();
             c1.setNome("Fulano");
             c1.setCpf("45759724878");
@@ -18,7 +18,7 @@ public class BDClientes {
             c1.setEmail("fulano@domain.com");
             c1.setTelefone("+55 13 99000-1111");
             c1.setEndereco("Rua Antônio Figueiredo, 503");
-            clienteList.add(c1);
+            clientesList.add(c1);
             
             Clientes c2 = new Clientes();
             c2.setNome("Mano");
@@ -27,8 +27,8 @@ public class BDClientes {
             c2.setEmail("mano@domain.com");
             c2.setTelefone("+55 13 99123-1100");
             c2.setEndereco("Avenida Roberto Sales, 2015");
-            clienteList.add(c2);
+            clientesList.add(c2);
         }
-        return clienteList;
+        return clientesList;
     }
 }
